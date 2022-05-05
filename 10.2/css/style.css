@@ -1,0 +1,48 @@
+.btn {
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 1px solid grey;
+  color: black;
+  width: auto;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 50px auto;
+  font: normal bold 18px/12px Verdana;
+  transition: 0.5s;
+  background-color: blue;
+  box-shadow: 13px -8px 8px 8px rgba(100, 100, 100, 0.3);
+}
+
+.btn:hover {
+  background-color: grey;
+  border: 1px solid transparant;
+  box-shadow: none;
+}
+
+.btn-svg,
+.btn-svg-active {
+  margin-left: 10px;
+}
+
+.btn-svg-active {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes animatSvg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: scale(-1, 1);
+  }
+}
+
+.btn-svg-active {
+  animation: animatSvg 0.3s ease 0.3s 1 alternate forwards;
+}
