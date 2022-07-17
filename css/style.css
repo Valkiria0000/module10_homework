@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-image: url(../img/bcg_foto.jpg);
+  position: relative;
+}
+
+.main {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.title {
+  font: normal bold 40px/42px "Yanone Kaffeesatz", sans-serif;
+  text-align: center;
+  color: rgb(238, 162, 48);
+  margin-bottom: 10px;
+}
+.communication-text {
+  color: #f9f9fd;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.text-output {
+  width: 40%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: all 1s ease;
+}
+
+.text-output::-webkit-scrollbar {
+  width: 15px;
+  background-color: #f9f9fd;
+  border-radius: 20px;
+}
+
+.text-output::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(97, 100, 97);
+}
+
+.text-output::-webkit-scrollbar-track {
+  -webkit-box-shadow: 13px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+@keyframes animatPlanet {
+  from {
+    transform: rotate(-40deg);
+  }
+  to {
+    transform-origin: left bottom;
+    transform: scale(1.5);
+  }
+}
+
+.img-planet {
+  animation: animatPlanet 3s ease-in-out infinite alternate forwards;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+@keyframes animatMoon {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-planet-moon {
+  animation: animatMoon 10s ease-out infinite alternate forwards;
+  position: absolute;
+  right: 0;
+  top: 44%;
+}
+
+@keyframes animatTree {
+  from {
+    opacity: 0;
+  }
+  to {
+  }
+}
+
+.img-tree {
+  width: 615px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  animation: animatTree 6s ease-out 1 forwards;
+}
+
+.input {
+  border: none;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.btn {
+  border: none;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 13px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  margin-left: 8px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(193, 241, 187),
+    rgb(13, 105, 4)
+  );
+  font: bold 14px Verdana;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    to top,
+    rgb(193, 241, 187),
+    rgb(13, 105, 4)
+  );
+  transition: all 1s;
+}
+.form-item {
+  margin-top: 10px;
+}
+
+.overflow {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.overflow > p {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  font: normal 14px Merriweather;
+}
+
+.admin {
+  background-color: rgb(131, 247, 218);
+  align-self: flex-start;
+}
+
+.user {
+  background-color: rgb(141, 247, 131);
+  align-self: flex-end;
+}
+
+.text-bold {
+  font: bold 14px Verdana;
+}
+
+.btn-geo {
+  border: none;
+  width: auto;
+  width: 456px;
+  padding: 6px 3px;
+  border-radius: 11px;
+  box-shadow: 13px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  margin: 8px auto;
+  background-color: rgb(228, 149, 46);
+  font: bold 12px Verdana;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.btn-geo:hover {
+  box-shadow: 13px 5px 5px -5px rgba(34, 60, 80, 0.2);
+  margin: 8px auto;
+  background-color: rgb(175, 169, 169);
+  color: black;
+  transition: all 0.6s;
+}
+.status {
+  margin: 0;
+  font: bold 18px Verdana;
+}
+
+.link {
+  color: rgb(13, 105, 4);
+  font: bold 18px Verdana;
+}
+
+.link:hover {
+  color: rgb(148, 3, 3);
+  font: bold 18px Verdana;
+  text-decoration: none;
+  transition: all 0.8s;
+}
